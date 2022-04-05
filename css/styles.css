@@ -141,11 +141,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
-    margin-bottom: -30px;
 }
 
 .btn {
-    margin-bottom: 34px;
+    margin-bottom: 50px;
     justify-content: center;
 }
 
