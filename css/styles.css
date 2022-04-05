@@ -184,8 +184,7 @@ body {
     width: 370px;
     min-height: 404px;
     border: 1px solid #EEEEEE;
-    /* margin-right: 30px;
-    margin-bottom: 30px; */
+
 }
 
 .examples-item-box:hover {
@@ -206,6 +205,43 @@ body {
     margin-bottom: 0;
 }
 
+.exemples-thumb {
+    position: relative;
+}
+
+.exemples-thumb:hover::before,
+.box {
+    opacity: 1;
+}
+
+.exemples-thumb:hover .examples-actions {
+    opacity: 1;
+}
+
+.exemples-thumb::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/hover\ overlay.svg);
+
+    opacity: 0;
+}
+
+.examples-actions {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--primery-text-color);
+    width: 322px;
+    height: 168px;
+    opacity: 0;
+}
+
 .container-box {
     padding: 20px 24px;
 }
@@ -222,7 +258,6 @@ body {
     font-size: 16px;
     line-height: 1.88;
 }
-
 
 /* --------HERO-------- */
 
@@ -313,10 +348,6 @@ body {
     justify-content: center;
 }
 
-.features-icon {
-    height: 70px;
-}
-
 .features-title {
     color: var(--second-text-color);
     text-transform: uppercase;
@@ -354,7 +385,32 @@ body {
     margin-right: 30px;
 }
 
+.galary-app {
+    position: relative;
+}
+
 .galary-img {}
+
+.galary-img {}
+
+.galary-app-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--primery-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.galary-svg {}
 
 
 /* --------COMMAND-------- */
@@ -552,7 +608,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--primery-text-color);
@@ -584,4 +640,47 @@ body {
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: var(--accent-color);
+}
+
+
+/* -------------modal Windows-------------- */
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: var(--body-bg-color);
+}
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    fill: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--personal-bg-color);
+    width: 30px;
+    height: 30px;
 }
