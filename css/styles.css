@@ -93,19 +93,27 @@ body {
     content: " ";
     position: absolute;
     height: 4px;
-    width: 100%;
+    width: 0%;
     border-radius: 2px;
     background-color: var(--accent-color);
     display: block;
     top: 46px;
+
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current:hover::after,
+.current:focus::after {
+    width: 100%;
 }
 
 .current {
-    color: var(--accent-color);
     position: relative;
 }
 
-
+.current.activ {
+    color: var(--accent-color);
+}
 
 
 .header-icon {
