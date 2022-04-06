@@ -202,11 +202,10 @@ body {
     width: 370px;
     min-height: 404px;
     border: 1px solid #EEEEEE;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .examples-item-box:hover {
@@ -408,8 +407,9 @@ body {
     line-height: 1.14;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 27px;
-    padding-bottom: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .galary-svg {}
